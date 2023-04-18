@@ -1,6 +1,3 @@
-document.body.style.backgroundColor = "#232931";
-document.body.style.color = "#eeeeee";
-
 const loginForm = document.querySelector(".login-form");
 loginForm.addEventListener("submit", handleSubmit);
 
@@ -10,7 +7,7 @@ function handleSubmit(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (email.value.trim() || password.value()) {
+  if (email.value === "" || password.value.trim() === "") {
     return alert("Please fill in all the fields!");
   } else {
     const formData = {
